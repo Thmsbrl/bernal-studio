@@ -87,7 +87,6 @@ export function Projects() {
                 transition={{ duration: 0.55, delay: index * 0.06 }}
                 className="group grid items-center gap-6 rounded-[1.8rem] border border-black/5 bg-gradient-to-b from-white to-[#f9f9f8] p-4 shadow-[0_28px_90px_rgba(0,0,0,0.07)] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:shadow-[0_60px_160px_rgba(0,0,0,0.12)] sm:gap-8 sm:rounded-[2rem] sm:p-5 md:grid-cols-[1.06fr_0.94fr] md:rounded-[2.3rem] md:p-7 lg:p-8"
               >
-                {/* IMAGE */}
                 <div className={`${isReversed ? "md:order-2" : ""} relative`}>
                   <div className="relative overflow-visible rounded-[1.4rem] bg-[#f3f2ef] p-2.5 shadow-[0_18px_60px_rgba(0,0,0,0.05)] sm:rounded-[1.6rem] sm:p-3 md:rounded-[1.8rem]">
                     <div className="relative overflow-hidden rounded-[1.15rem] bg-white sm:rounded-[1.3rem] md:rounded-[1.45rem]">
@@ -115,7 +114,6 @@ export function Projects() {
                   </div>
                 </div>
 
-                {/* TEXTE */}
                 <div className={`${isReversed ? "md:order-1" : ""}`}>
                   <p className="text-sm font-medium text-zinc-500">
                     {project.category}
@@ -144,23 +142,15 @@ export function Projects() {
                     ))}
                   </div>
 
-                  {/* CTA */}
                   <div className="mt-8">
-                    {project.liveUrl ? (
+                    {project.liveUrl && (
                       <Link
                         href={project.liveUrl}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 rounded-full bg-zinc-950 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:scale-[1.03] hover:bg-zinc-800"
                       >
                         {project.liveLabel}
-                        <ArrowUpRight className="h-4 w-4" />
-                      </Link>
-                    ) : (
-                      <Link
-                        href={project.caseUrl}
-                        className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-6 py-3 text-sm font-medium text-zinc-950 transition-all duration-300 hover:scale-[1.03] hover:bg-zinc-50"
-                      >
-                        Voir la démo
                         <ArrowUpRight className="h-4 w-4" />
                       </Link>
                     )}
