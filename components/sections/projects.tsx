@@ -13,8 +13,8 @@ const projects = [
     benefit: "Direction visuelle forte et prise de contact simplifiée.",
     image: "/projects/hero-mockup.jpg",
     tags: ["Design", "Responsive", "UI premium"],
-    liveUrl: "",
-    caseUrl: "#contact",
+    liveUrl: "https://atelier-noir-demo-gamma.vercel.app/",
+    liveLabel: "Voir la démo",
     overlayImage: "",
     overlayAlt: "",
     overlayStyle: "",
@@ -30,6 +30,7 @@ const projects = [
     overlayAlt: "Aperçu agenda mobile",
     tags: ["UX", "Responsive", "Réservation"],
     liveUrl: "https://oliviaponzio-psychopraticienne-nimes.fr/",
+    liveLabel: "Voir le site",
     caseUrl: "",
     overlayStyle:
       "bottom-[-10px] right-[-4px] w-[82px] sm:w-[92px] md:bottom-[-10px] md:right-[-6px] md:w-[110px] rotate-[-2deg]",
@@ -44,8 +45,8 @@ const projects = [
     overlayImage: "/projects/noxra-products.jpg",
     overlayAlt: "Aperçu panier mobile",
     tags: ["Branding", "E-commerce", "UI"],
-    liveUrl: "",
-    caseUrl: "#contact",
+    liveUrl: "https://bernal-studio-6lcl.vercel.app/",
+    liveLabel: "Voir la démo",
     overlayStyle:
       "bottom-[-16px] right-[8px] w-[86px] sm:w-[96px] md:bottom-[-22px] md:right-[12px] md:w-[115px] rotate-[1deg]",
   },
@@ -151,7 +152,7 @@ export function Projects() {
                         target="_blank"
                         className="inline-flex items-center gap-2 rounded-full bg-zinc-950 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:scale-[1.03] hover:bg-zinc-800"
                       >
-                        Voir le site
+                        {project.liveLabel}
                         <ArrowUpRight className="h-4 w-4" />
                       </Link>
                     ) : (
