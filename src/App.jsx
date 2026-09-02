@@ -8,7 +8,7 @@ import Intro from "./components/intro/Intro";
 import Hero from "./components/hero/Hero";
 
 import SelectedWork from "./components/selected-work/SelectedWork";
-import About from "./components/About/About";
+import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 
 import PranaProject from "./components/selected-work/prana/PranaProject";
