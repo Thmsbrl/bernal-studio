@@ -1,0 +1,193 @@
+/* ========================================
+   INTRO
+======================================== */
+
+.intro {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+
+  background: #020202;
+
+  will-change: opacity;
+}
+
+
+/* GRAIN */
+
+.intro-noise {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  opacity: 0.05;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+}
+
+
+/* BLOOM */
+
+.intro-flash {
+  position: absolute;
+  inset: -20%;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,.75) 0%,
+      rgba(255,255,255,.15) 25%,
+      transparent 58%
+    );
+}
+
+
+/* COMPLETE LOGO */
+
+.intro-logo-container {
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: min(610px, 70vw);
+}
+
+
+.intro-monogram {
+  width: 100%;
+
+  transform-origin: center center;
+
+  will-change: transform;
+}
+
+
+/* SVG */
+
+.bs-svg {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  overflow: visible;
+}
+
+
+/* SOLID */
+
+.bs-solid {
+  fill: #f4f4f1;
+
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+
+/* DRAW */
+
+.bs-draw {
+  fill: none;
+
+  stroke: #f4f4f1;
+  stroke-width: 2.4;
+
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+
+  vector-effect: non-scaling-stroke;
+}
+
+
+/* UNDERLINE */
+
+.intro-line {
+  display: block;
+
+  width: 58px;
+  height: 1px;
+
+  margin-top: -7px;
+  margin-bottom: 20px;
+
+  background:
+    rgba(245,245,242,.48);
+}
+
+
+/* NAME */
+
+.intro-name {
+  padding-left: .42em;
+
+  color:
+    rgba(245,245,242,.9);
+
+  font-size:
+    clamp(.72rem, 1vw, .92rem);
+
+  font-weight: 400;
+
+  letter-spacing: .42em;
+
+  white-space: nowrap;
+}
+
+
+/* ========================================
+   MOBILE REVEAL
+======================================== */
+
+@media (max-width: 700px) {
+
+  .intro-logo-reveal {
+    width: 84vw;
+  }
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .intro-logo-container {
+    width: 84vw;
+  }
+
+  .bs-draw {
+    stroke-width: 2;
+  }
+
+  .intro-line {
+    margin-top: -4px;
+  }
+
+  .intro-name {
+    font-size: .64rem;
+
+    letter-spacing: .32em;
+
+    padding-left: .32em;
+  }
+}

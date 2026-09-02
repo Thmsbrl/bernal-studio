@@ -1,0 +1,239 @@
+/* ========================================
+   GLOBAL CUSTOM CURSOR
+======================================== */
+
+.global-cursor {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 999999;
+
+  display: grid;
+
+  width: 30px;
+  height: 30px;
+
+  place-items: center;
+
+  border:
+    1px solid rgba(242, 241, 237, .42);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  background:
+    rgba(242, 241, 237, 0);
+
+  transform:
+    translate(-50%, -50%);
+
+  will-change:
+    transform,
+    width,
+    height;
+
+  backdrop-filter:
+    blur(2px);
+}
+
+
+/* ========================================
+   CURSOR LABEL
+======================================== */
+
+.global-cursor span {
+  color: #f2f1ed;
+
+  font-size: .48rem;
+
+  font-weight: 600;
+
+  letter-spacing: .14em;
+
+  text-transform: uppercase;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   CURSOR DOT
+======================================== */
+
+.global-cursor-dot {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 1000000;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  background: #f2f1ed;
+
+  transform:
+    translate(-50%, -50%);
+
+  will-change: transform;
+}
+
+
+/* ========================================
+   BERNAL STUDIO
+======================================== */
+
+.global-cursor-bernal {
+  border-color:
+    rgba(242, 241, 237, .42);
+
+  background:
+    rgba(242, 241, 237, 0);
+
+  box-shadow: none;
+}
+
+
+.global-cursor-bernal span {
+  color: #f2f1ed;
+}
+
+
+.global-cursor-dot-bernal {
+  background: #f2f1ed;
+
+  box-shadow: none;
+}
+
+
+/* ========================================
+   PRANA
+======================================== */
+
+.global-cursor-prana {
+  border-color:
+    rgba(201, 163, 74, .75);
+
+  background:
+    rgba(201, 163, 74, .04);
+
+  box-shadow:
+    0 0 14px rgba(201, 163, 74, .10),
+    inset 0 0 10px rgba(201, 163, 74, .04);
+}
+
+
+.global-cursor-prana span {
+  color: #c9a34a;
+}
+
+
+.global-cursor-dot-prana {
+  background: #c9a34a;
+
+  box-shadow:
+    0 0 8px rgba(201, 163, 74, .45);
+}
+
+
+/* ========================================
+   ELIAS
+======================================== */
+
+.global-cursor-elias {
+  transition:
+    border-color .3s ease,
+    background-color .3s ease;
+}
+
+.global-cursor-elias span {
+  transition: color .3s ease;
+}
+
+
+/* DARK BACKGROUND */
+
+.global-cursor-elias-light {
+  border-color: rgba(242, 241, 237, .55);
+}
+
+.global-cursor-elias-light span {
+  color: #f2f1ed;
+}
+
+.global-cursor-dot-elias-light {
+  background: #f2f1ed;
+}
+
+
+/* LIGHT BACKGROUND */
+
+.global-cursor-elias-dark {
+  border-color: rgba(23, 23, 20, .55);
+}
+
+.global-cursor-elias-dark span {
+  color: #171714;
+}
+
+.global-cursor-dot-elias-dark {
+  background: #171714;
+}
+
+/* ========================================
+   ELIAS
+======================================== */
+
+.global-cursor-elias-light {
+  border-color: rgba(242, 241, 237, .42);
+}
+
+.global-cursor-dot-elias-light {
+  background: #f2f1ed;
+}
+
+.global-cursor-elias-dark {
+  border-color: rgba(43, 41, 38, .60);
+}
+
+.global-cursor-dot-elias-dark {
+  background: #2b2926;
+}
+
+
+/* ========================================
+   DESKTOP
+======================================== */
+
+@media (pointer: fine) {
+
+  body,
+  button,
+  a,
+  [data-cursor] {
+    cursor: none !important;
+  }
+
+}
+
+
+/* ========================================
+   TOUCH DEVICES
+======================================== */
+
+@media (pointer: coarse) {
+
+  .global-cursor,
+  .global-cursor-dot {
+    display: none;
+  }
+
+}

@@ -1,0 +1,1073 @@
+/* ========================================
+   SELECTED WORK
+======================================== */
+
+.selected-work {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding:
+        clamp(110px, 14vw, 220px) clamp(28px, 4vw, 68px) clamp(80px, 8vw, 130px);
+
+    background: #080808;
+    color: #f2f1ed;
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.selected-work-intro {
+    width: 100%;
+
+    margin-bottom:
+        clamp(100px, 12vw, 180px);
+}
+
+
+.selected-work-intro-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding-bottom: 26px;
+
+    border-bottom:
+        1px solid rgba(242, 241, 237, .14);
+}
+
+
+.selected-work-index {
+    color: rgba(242, 241, 237, .38);
+
+    font-size: .72rem;
+
+    letter-spacing: .18em;
+}
+
+
+.selected-work-label {
+    color: rgba(242, 241, 237, .68);
+
+    font-size: .76rem;
+
+    letter-spacing: .2em;
+
+    text-transform: uppercase;
+}
+
+
+.selected-work-intro-main {
+    display: grid;
+
+    align-items: end;
+
+    grid-template-columns:
+        minmax(0, 1fr) minmax(240px, 340px);
+
+    gap: 60px;
+
+    padding-top:
+        clamp(55px, 7vw, 105px);
+}
+
+
+.selected-work-intro-main h2 {
+    margin: 0;
+
+    font-size:
+        clamp(5rem, 12vw, 13rem);
+
+    font-weight: 700;
+
+    letter-spacing: -.075em;
+
+    line-height: .76;
+
+    text-transform: uppercase;
+}
+
+
+.selected-work-intro-main h2 span {
+    display: inline-block;
+
+    margin-left: 10vw;
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        1px rgba(242, 241, 237, .7);
+}
+
+
+.selected-work-intro-main p {
+    max-width: 340px;
+
+    margin: 0 0 10px;
+
+    color: rgba(242, 241, 237, .55);
+
+    font-size: .9rem;
+
+    letter-spacing: .03em;
+
+    line-height: 1.65;
+}
+
+
+/* ========================================
+   PROJECT
+======================================== */
+
+.selected-project {
+    position: relative;
+
+    display: grid;
+
+    width: 100%;
+
+    margin-bottom:
+        clamp(80px, 10vw, 150px);
+
+    grid-template-columns:
+        minmax(60px, .15fr) minmax(280px, .65fr) minmax(420px, 1.2fr);
+
+    grid-template-areas:
+        "number heading visual"
+        ". meta visual";
+
+    column-gap:
+        clamp(30px, 5vw, 90px);
+}
+
+.selected-project:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   PROJECT NUMBER
+======================================== */
+
+.project-number {
+    grid-area: number;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    padding-top: 33px;
+
+    color: rgba(242, 241, 237, .4);
+
+    font-size: .7rem;
+
+    letter-spacing: .18em;
+}
+
+
+.project-number-line {
+    display: block;
+
+    width: 35px;
+    height: 1px;
+
+    margin-top: 5px;
+
+    background:
+        rgba(242, 241, 237, .3);
+}
+
+
+/* ========================================
+   PROJECT HEADING
+======================================== */
+
+.project-heading {
+    position: relative;
+
+    z-index: 3;
+
+    grid-area: heading;
+
+    align-self: start;
+
+    padding-top: 27px;
+}
+
+
+.project-category {
+    display: block;
+
+    margin-bottom:
+        clamp(30px, 4vw, 55px);
+
+    color: rgba(242, 241, 237, .52);
+
+    font-size: .75rem;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+}
+
+
+.project-heading h3 {
+    position: relative;
+
+    z-index: 4;
+
+    margin: 0;
+
+    font-size:
+        clamp(4.4rem, 8.4vw, 10rem);
+
+    font-weight: 700;
+
+    letter-spacing: -.075em;
+
+    line-height: .78;
+
+    text-transform: uppercase;
+
+    pointer-events: none;
+}
+
+
+.project-heading h3 span {
+    display: block;
+
+    width: max-content;
+}
+
+
+.project-heading h3 span:last-child {
+    margin-left: 4vw;
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        1px rgba(242, 241, 237, .78);
+}
+
+
+/* ========================================
+   VISUAL
+======================================== */
+
+.project-visual {
+    position: relative;
+
+    grid-area: visual;
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border: 0;
+
+    background: #111;
+
+    color: #f2f1ed;
+
+    cursor: pointer;
+}
+
+
+.project-visual-placeholder {
+    position: absolute;
+
+    inset: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        radial-gradient(circle at 65% 40%,
+            rgba(255, 255, 255, .09),
+            transparent 38%),
+        #111;
+}
+
+
+.project-visual-placeholder>span {
+    color: rgba(242, 241, 237, .12);
+
+    font-size:
+        clamp(4rem, 9vw, 10rem);
+
+    font-weight: 700;
+
+    letter-spacing: -.07em;
+}
+
+
+/* subtle frame */
+
+.project-preview-video {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    pointer-events: none;
+}
+
+.project-visual::after {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    border:
+        1px solid rgba(242, 241, 237, .12);
+
+    content: "";
+
+    pointer-events: none;
+
+    transition:
+        border-color .45s ease;
+}
+
+
+.project-visual:hover::after {
+    border-color:
+        rgba(242, 241, 237, .3);
+}
+
+/* ========================================
+   VISUAL
+======================================== */
+
+.project-visual {
+    position: relative;
+
+    grid-area: visual;
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border: 0;
+
+    background: #111;
+
+    color: #f2f1ed;
+
+    cursor: pointer;
+}
+
+
+.project-visual-placeholder {
+    position: absolute;
+
+    inset: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        radial-gradient(circle at 65% 40%,
+            rgba(255, 255, 255, .09),
+            transparent 38%),
+        #111;
+}
+
+
+.project-visual-placeholder>span {
+    color: rgba(242, 241, 237, .12);
+
+    font-size:
+        clamp(4rem, 9vw, 10rem);
+
+    font-weight: 700;
+
+    letter-spacing: -.07em;
+}
+
+
+/* subtle frame */
+
+.project-preview-video {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    pointer-events: none;
+}
+
+.project-visual::after {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    border:
+        1px solid rgba(242, 241, 237, .12);
+
+    content: "";
+
+    pointer-events: none;
+
+    transition:
+        border-color .45s ease;
+}
+
+
+.project-visual:hover::after {
+    border-color:
+        rgba(242, 241, 237, .3);
+}
+
+.project-visual-elias .project-preview-video {
+    position: relative;
+    inset: auto;
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: initial;
+}
+
+
+/* ========================================
+   ENTER PROJECT
+======================================== */
+
+.project-enter {
+    position: absolute;
+
+    right: 28px;
+    bottom: 28px;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding:
+        13px 14px 13px 18px;
+
+    border:
+        1px solid rgba(242, 241, 237, .25);
+
+    background:
+        rgba(8, 8, 8, .22);
+
+    backdrop-filter:
+        blur(12px);
+
+    color: #f2f1ed;
+
+    font-size: .7rem;
+
+    letter-spacing: .14em;
+
+    text-transform: uppercase;
+
+    transition:
+        background-color .4s ease,
+        color .4s ease,
+        border-color .4s ease;
+}
+
+
+.project-enter-arrow {
+    display: grid;
+
+    width: 30px;
+    height: 30px;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #f2f1ed;
+    color: #080808;
+
+    font-size: .85rem;
+
+    transition:
+        transform .45s cubic-bezier(.16, 1, .3, 1);
+}
+
+
+.project-visual:hover .project-enter {
+    border-color: #f2f1ed;
+
+    background: #f2f1ed;
+    color: #080808;
+}
+
+
+.project-visual:hover .project-enter-arrow {
+    background: #080808;
+    color: #f2f1ed;
+
+    transform:
+        rotate(45deg);
+}
+
+
+/* ========================================
+   META
+======================================== */
+
+.project-meta {
+    grid-area: meta;
+
+    display: grid;
+
+    align-self: end;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    padding-top: 38px;
+}
+
+
+.project-meta>div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.project-meta>div>span:last-child {
+    color: rgba(242, 241, 237, .68);
+
+    font-size: .72rem;
+
+    letter-spacing: .08em;
+
+    line-height: 1.5;
+
+    text-transform: uppercase;
+}
+
+
+.project-meta-label {
+    color: rgba(242, 241, 237, .38);
+
+    font-size: .62rem;
+
+    letter-spacing: .16em;
+
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   PRANA
+======================================== */
+
+.selected-project-prana .project-visual {
+  width: 94%;
+  transform: translateY(70px);
+
+  height: fit-content;
+  background: transparent;
+}
+
+.selected-project-prana .project-preview-video {
+  position: relative;
+  inset: auto;
+
+  display: block;
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/*
+ * Le titre vient légèrement manger
+ * le visuel.
+ */
+
+.selected-project-prana .project-heading {
+    margin-right: -8vw;
+}
+
+
+/* ========================================
+   ELIAS — INVERTED COMPOSITION
+======================================== */
+
+.selected-project-elias {
+    grid-template-columns:
+        minmax(420px, 1.2fr) minmax(280px, .65fr) minmax(60px, .15fr);
+
+    grid-template-areas:
+        "visual heading number"
+        "visual meta .";
+}
+
+
+.selected-project-elias .project-number {
+    justify-self: end;
+
+    flex-direction: row-reverse;
+}
+
+
+.selected-project-elias .project-heading {
+    margin-left: -7vw;
+}
+
+
+.selected-project-elias .project-heading h3 {
+    text-align: right;
+}
+
+
+.selected-project-elias .project-heading h3 span {
+    margin-left: auto;
+}
+
+
+.selected-project-elias .project-heading h3 span:last-child {
+    margin-right: 4vw;
+}
+
+
+.selected-project-elias .project-category {
+    text-align: right;
+}
+
+
+.selected-project-elias .project-visual {
+    transform:
+        translateX(-3vw);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .selected-work {
+        padding:
+            90px 19px 80px;
+    }
+
+
+    /* INTRO */
+
+    .selected-work-intro {
+        margin-bottom: 85px;
+    }
+
+
+    .selected-work-intro-main {
+        display: block;
+
+        padding-top: 55px;
+    }
+
+
+    .selected-work-intro-main h2 {
+        font-size:
+            clamp(4rem, 20vw, 7rem);
+
+        line-height: .8;
+    }
+
+
+    .selected-work-intro-main h2 span {
+        margin-left: 7vw;
+    }
+
+
+    .selected-work-intro-main p {
+        max-width: 300px;
+
+        margin:
+            45px 0 0 auto;
+
+        color: rgba(242, 241, 237, .58);
+
+        font-size: .78rem;
+
+        line-height: 1.65;
+    }
+
+
+    /* PROJECT */
+
+    .selected-project,
+    .selected-project-elias {
+        display: flex;
+
+        margin-bottom: 95px;
+
+        flex-direction: column;
+    }
+
+
+    .project-number,
+    .selected-project-elias .project-number {
+        order: 1;
+
+        justify-content: flex-start;
+
+        flex-direction: row;
+
+        padding-top: 0;
+
+        margin-bottom: 38px;
+
+        font-size: .65rem;
+    }
+
+
+    .project-heading,
+    .selected-project-prana .project-heading,
+    .selected-project-elias .project-heading {
+        order: 2;
+
+        margin:
+            0 0 -7vw;
+
+        padding: 0;
+    }
+
+
+    .selected-project-elias .project-heading h3 {
+        text-align: left;
+    }
+
+
+    .selected-project-elias .project-heading h3 span {
+        margin-left: 0;
+    }
+
+
+    .project-category,
+    .selected-project-elias .project-category {
+        margin-bottom: 25px;
+
+        text-align: left;
+
+        font-size: .68rem;
+    }
+
+
+    .project-heading h3 {
+        font-size:
+            clamp(4rem, 19vw, 7rem);
+    }
+
+
+    .project-heading h3 span:last-child,
+    .selected-project-elias .project-heading h3 span:last-child {
+        margin:
+            0 0 0 8vw;
+    }
+
+    /* ========================================
+   MOBILE ASYMMETRY — PRANA
+======================================== */
+
+    .selected-project-prana .project-number {
+        margin-left: 2vw;
+    }
+
+    .selected-project-prana .project-heading {
+        width: 94%;
+    }
+
+    .selected-project-prana .project-visual {
+        width: 94%;
+        align-self: flex-end;
+        margin-top: 30px;
+    }
+
+    .selected-project-prana .project-meta {
+        width: 90%;
+        align-self: flex-end;
+    }
+
+
+    /* ========================================
+   MOBILE ASYMMETRY — ELIAS
+======================================== */
+
+    .selected-project-elias .project-number {
+        align-self: flex-end;
+        margin-right: 2vw;
+    }
+
+    .selected-project-elias .project-category {
+        text-align: right;
+    }
+
+    .selected-project-elias .project-heading {
+        width: 94%;
+        align-self: flex-end;
+    }
+
+    .selected-project-elias .project-heading h3 {
+        text-align: right;
+    }
+
+    .selected-project-elias .project-heading h3 span {
+        margin-left: auto;
+    }
+
+    .selected-project-elias .project-heading h3 span:last-child {
+        margin-left: 0;
+        margin-right: 8vw;
+    }
+
+    .selected-project-elias .project-visual {
+        width: 94%;
+        align-self: flex-start;
+    }
+
+    .selected-project-elias .project-meta {
+        width: 90%;
+        align-self: flex-start;
+    }
+
+
+
+    /* VISUAL */
+
+    .project-visual,
+    .selected-project-prana .project-visual,
+    .selected-project-elias .project-visual {
+        order: 3;
+
+        position: relative;
+        display: block;
+
+        width: 94%;
+        height: auto;
+
+        overflow: hidden;
+        transform: none;
+    }
+
+    .project-visual .project-preview-video {
+        position: relative;
+        inset: auto;
+
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        object-fit: contain;
+    }
+
+
+
+    .project-enter {
+        right: 20px;
+        bottom: 18px;
+
+        gap: 9px;
+
+        padding:
+            8px 8px 8px 11px;
+
+        font-size: .54rem;
+    }
+
+
+    .project-enter-arrow {
+        width: 22px;
+        height: 22px;
+    }
+
+
+    /* META */
+
+    .project-meta {
+        order: 4;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 12px;
+
+        padding-top: 24px;
+    }
+
+
+    .project-meta>div>span:last-child {
+        font-size: .62rem;
+    }
+
+
+    .project-meta-label {
+        font-size: .54rem;
+    }
+
+}
+
+
+/* ========================================
+   VERY SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+
+    .selected-work-intro-top {
+        gap: 14px;
+    }
+
+
+    .selected-work-index {
+        font-size: .62rem;
+    }
+
+
+    .selected-work-label {
+        font-size: .64rem;
+    }
+
+
+    .selected-work-intro-main p {
+        font-size: .72rem;
+    }
+
+
+    .project-meta {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .project-meta>div:last-child {
+        grid-column:
+            1 / -1;
+    }
+
+
+    .project-meta>div>span:last-child {
+        font-size: .6rem;
+    }
+
+
+    .project-meta-label {
+        font-size: .52rem;
+    }
+
+}
+
+/* ========================================
+   PROJECT OPENING TRANSITION
+======================================== */
+
+.project-transition-clone {
+    position: fixed !important;
+
+    overflow: hidden;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+    border-radius: 0;
+
+    background: #080808;
+
+    transform: none !important;
+
+    transform-origin: center center;
+
+    will-change:
+        top,
+        left,
+        width,
+        height,
+        opacity;
+
+    backface-visibility: hidden;
+}
+
+
+/* On retire le cadre de Selected Work
+   pendant l'expansion */
+
+.project-transition-clone::after {
+    opacity: 0;
+}
+
+
+/* Le CTA disparaît dans la transition */
+
+.project-transition-clone .project-enter {
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* La vidéo remplit réellement
+   tout le clone */
+
+.project-transition-clone .project-preview-video {
+    position: absolute;
+
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    pointer-events: none;
+}

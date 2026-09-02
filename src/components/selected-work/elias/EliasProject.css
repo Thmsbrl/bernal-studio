@@ -1,0 +1,2253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Italiana&family=Manrope:wght@300;400;500&display=swap');
+
+/* ========================================
+   ELIAS PROJECT
+======================================== */
+
+.elias-project {
+    --elias-cream: #f3efe7;
+    --elias-soft-cream: #e9e1d5;
+    --elias-warm-white: #faf8f4;
+
+    --elias-ink: #171714;
+    --elias-charcoal: #24231f;
+    --elias-taupe: #918778;
+    --elias-gold: #b69a6a;
+
+    --elias-border:
+        rgba(23, 23, 20, 0.16);
+
+    --elias-serif:
+        "Italiana",
+        "Times New Roman",
+        serif;
+
+    --elias-sans:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+    --elias-utility:
+        "Inter",
+        Arial,
+        sans-serif;
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background: var(--elias-cream);
+    color: var(--elias-ink);
+
+    font-family: var(--elias-sans);
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+.elias-project *,
+.elias-project *::before,
+.elias-project *::after {
+    box-sizing: border-box;
+}
+
+
+.elias-project button,
+.elias-project a {
+    color: inherit;
+    font: inherit;
+}
+
+
+.elias-project button {
+    border: 0;
+}
+
+
+.elias-project img,
+.elias-project video {
+    display: block;
+
+    max-width: 100%;
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.elias-project .intro-screen {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    display: grid;
+
+    place-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 50% 42%,
+            rgba(207, 189, 159, 0.17),
+            transparent 38%),
+        #f7f3ec;
+}
+
+
+.elias-project .intro-content {
+    position: relative;
+
+    z-index: 4;
+
+    display: flex;
+
+    width: min(74vw, 470px);
+
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.elias-project .intro-logo {
+    width: min(100%, 440px);
+
+    max-height: 240px;
+
+    object-fit: contain;
+}
+
+
+.elias-project .intro-line {
+    display: block;
+
+    width: 82px;
+    height: 1px;
+
+    margin-top: 22px;
+
+    background: var(--elias-gold);
+}
+
+
+.elias-project .intro-subtitle {
+    margin-top: 18px;
+
+    color:
+        rgba(23, 23, 20, 0.58);
+
+    font-family:
+        var(--elias-utility);
+
+    font-size: 0.64rem;
+    font-weight: 400;
+
+    letter-spacing: 0.31em;
+
+    text-transform: uppercase;
+}
+
+
+.elias-project .intro-light {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+}
+
+
+.elias-project .intro-light-one {
+    top: -12%;
+    left: -7%;
+
+    width: 45vw;
+    height: 45vw;
+
+    background:
+        rgba(193, 160, 112, 0.12);
+}
+
+
+.elias-project .intro-light-two {
+    right: -12%;
+    bottom: -20%;
+
+    width: 50vw;
+    height: 50vw;
+
+    background:
+        rgba(173, 143, 102, 0.1);
+}
+
+
+.elias-project .intro-grain,
+.elias-project .hero-film-grain,
+.elias-project .closing-grain {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.06;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.7'/%3E%3C/svg%3E");
+
+    mix-blend-mode: multiply;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.elias-project .hero-section {
+    position: relative;
+
+    min-height: 100svh;
+
+    overflow: hidden;
+
+    background: #191816;
+    color: #fff;
+}
+
+
+.elias-project .hero-video {
+    position: absolute;
+
+    inset: -8% 0 0;
+
+    width: 100%;
+    height: 116%;
+
+    max-width: none;
+
+    object-fit: cover;
+    object-position: center;
+
+    will-change: transform;
+}
+
+
+.elias-project .hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+}
+
+
+.elias-project .hero-overlay-main {
+    z-index: 1;
+
+    background:
+        rgba(9, 9, 8, 0.26);
+}
+
+
+.elias-project .hero-overlay-gradient {
+    z-index: 2;
+
+    background:
+        linear-gradient(90deg,
+            rgba(7, 7, 6, 0.63) 0%,
+            rgba(7, 7, 6, 0.27) 43%,
+            rgba(7, 7, 6, 0.08) 72%),
+        linear-gradient(180deg,
+            rgba(8, 8, 7, 0.38) 0%,
+            transparent 31%,
+            transparent 68%,
+            rgba(8, 8, 7, 0.38) 100%);
+}
+
+
+.elias-project .hero-film-grain {
+    z-index: 3;
+
+    opacity: 0.12;
+
+    mix-blend-mode: soft-light;
+}
+
+
+/* ========================================
+   HERO HEADER
+======================================== */
+
+.elias-project .hero-header {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    left: 0;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding:
+        30px clamp(24px, 5vw, 76px);
+}
+
+
+.elias-project .header-logo-button {
+    width: 175px;
+
+    padding: 0;
+
+    background: transparent;
+}
+
+
+.elias-project .header-logo {
+    width: 100%;
+
+    max-height: 80px;
+
+    filter:
+        brightness(0) invert(1);
+
+    object-fit: contain;
+    object-position: left center;
+}
+
+
+.elias-project .desktop-navigation {
+    display: flex;
+
+    align-items: center;
+
+    gap: 46px;
+}
+
+
+.elias-project .desktop-navigation button {
+    position: relative;
+
+    padding: 10px 0;
+
+    background: transparent;
+
+    color:
+        rgba(255, 255, 255, 0.83);
+
+    font-family:
+        var(--elias-utility);
+
+    font-size: 0.78rem;
+    font-weight: 400;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+
+    transition:
+        color 300ms ease,
+        opacity 300ms ease;
+}
+
+
+.elias-project .desktop-navigation button::after {
+    position: absolute;
+
+    right: 0;
+    bottom: 3px;
+    left: 0;
+
+    height: 1px;
+
+    background: currentColor;
+
+    content: "";
+
+    transform: scaleX(0);
+    transform-origin: right;
+
+    transition:
+        transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.elias-project .desktop-navigation button:hover {
+    color: #fff;
+}
+
+
+.elias-project .desktop-navigation button:hover::after {
+    transform: scaleX(1);
+
+    transform-origin: left;
+}
+
+
+.elias-project .desktop-navigation .navigation-contact {
+    padding: 15px 25px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.elias-project .desktop-navigation .navigation-contact::after {
+    display: none;
+}
+
+
+.elias-project .desktop-navigation .navigation-contact:hover {
+    background: #fff;
+
+    color: var(--elias-ink);
+}
+
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.elias-project .hero-content {
+    position: relative;
+    z-index: 6;
+
+    display: flex;
+
+    width: 100%;
+    height: 100svh;
+
+    flex-direction: column;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    padding:
+        105px clamp(24px, 5vw, 76px)
+        30px clamp(24px, 8vw, 132px);
+
+    overflow: hidden;
+
+    will-change: transform, opacity;
+}
+
+
+
+.elias-project .hero-eyebrow,
+.elias-project .section-eyebrow,
+.elias-project .quote-eyebrow,
+.elias-project .closing-eyebrow {
+    font-family:
+        var(--elias-utility);
+
+    font-size: 0.67rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+    letter-spacing: 0.25em;
+
+    text-transform: uppercase;
+}
+
+
+.elias-project .hero-eyebrow {
+    margin-top: 45px;
+    margin-bottom: 4px;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+}
+
+
+.elias-project .hero-title {
+    max-width: none;
+    width: 720px;
+
+    transform: translateY(3px);
+
+    font-family: var(--elias-serif);
+    font-size: clamp(4rem, 5.7vw, 6.3rem);
+    font-weight: 350;
+
+    letter-spacing: -0.055em;
+    line-height: 0.86;
+}
+
+.elias-project .hero-title-mask {
+    display: block;
+    width: 100%;
+    overflow: visible;
+}
+
+
+
+.elias-project .hero-title .hero-title-line {
+    display: block;
+
+    font-family: var(--elias-serif);
+    font-weight: 400;
+}
+
+
+.elias-project .hero-title .hero-title-italic {
+    width: max-content;
+
+    margin-top: 14px;
+    margin-left: clamp(55px, 6vw, 100px);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.62em;
+    font-style: italic;
+    font-weight: 400;
+
+    letter-spacing: -0.045em;
+    line-height: 0.95;
+}
+
+
+
+.elias-project .hero-description {
+    max-width: 540px;
+
+    margin-top: 1px;
+
+    color:
+        rgba(255, 255, 255, 0.76);
+
+    font-size:
+        clamp(0.89rem, 1.2vw, 1rem);
+
+    font-weight: 300;
+
+    line-height: 1.85;
+}
+
+
+.elias-project .hero-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    margin-top: 10px;
+}
+
+
+.elias-project .primary-button {
+    display: inline-flex;
+
+    min-width: 218px;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 38px;
+
+    padding:
+        17px 20px 17px 24px;
+
+    background:
+        var(--elias-warm-white);
+
+    color:
+        var(--elias-ink);
+
+    font-family:
+        var(--elias-utility);
+
+    font-size: 0.68rem;
+    font-weight: 500;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    transition:
+        transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 350ms ease;
+}
+
+
+.elias-project .primary-button:hover {
+    background: #fff;
+
+    transform:
+        translateY(-3px);
+}
+
+
+.elias-project .button-arrow {
+    font-size: 1rem;
+}
+
+
+.elias-project .text-button {
+    position: relative;
+
+    padding: 12px 0;
+
+    background: transparent;
+
+    color:
+        rgba(255, 255, 255, 0.85);
+
+    font-family:
+        var(--elias-utility);
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+.elias-project .text-button::after {
+    position: absolute;
+
+    right: 0;
+    bottom: 7px;
+    left: 0;
+
+    height: 1px;
+
+    background:
+        rgba(255, 255, 255, 0.65);
+
+    content: "";
+
+    transition:
+        transform 350ms ease;
+}
+
+
+.elias-project .text-button:hover::after {
+    transform: scaleX(0.6);
+}
+
+
+/* ========================================
+   HERO SCROLL
+======================================== */
+
+.elias-project .hero-scroll {
+    position: absolute;
+
+    right:
+        clamp(24px, 5vw, 76px);
+
+    bottom: 35px;
+
+    z-index: 8;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    background: transparent;
+
+    color:
+        rgba(255, 255, 255, 0.7);
+
+    font-family:
+        var(--elias-utility);
+
+    font-size: 0.61rem;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+}
+
+
+.elias-project .scroll-track {
+    position: relative;
+
+    display: block;
+
+    width: 68px;
+    height: 1px;
+
+    overflow: hidden;
+
+    background:
+        rgba(255, 255, 255, 0.25);
+}
+
+
+.elias-project .scroll-progress {
+    position: absolute;
+
+    inset: 0;
+
+    background: #fff;
+
+    animation:
+        eliasScrollProgress 2s infinite cubic-bezier(0.76, 0, 0.24, 1);
+
+    transform:
+        translateX(-100%);
+}
+
+
+@keyframes eliasScrollProgress {
+    0% {
+        transform:
+            translateX(-100%);
+    }
+
+    50% {
+        transform:
+            translateX(0);
+    }
+
+    100% {
+        transform:
+            translateX(100%);
+    }
+}
+
+
+/* ========================================
+   STORIES
+======================================== */
+
+.elias-project .stories-section {
+    position: relative;
+
+    padding:
+        clamp(65px, 7vw, 105px) clamp(22px, 5vw, 76px) clamp(45px, 5vw, 75px);
+
+    background:
+        var(--elias-cream);
+}
+
+
+.elias-project .stories-header {
+    display: grid;
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    grid-template-columns:
+        minmax(180px, 0.65fr) 1.8fr;
+
+    gap: 60px;
+}
+
+
+.elias-project .section-index {
+    display: flex;
+
+    align-items: center;
+    align-self: start;
+
+    gap: 13px;
+
+    padding-top: 8px;
+
+    color:
+        rgba(23, 23, 20, 0.58);
+
+    font-family:
+        var(--elias-utility);
+
+    font-size: 0.61rem;
+
+    letter-spacing: 0.17em;
+
+    text-transform: uppercase;
+}
+
+
+.elias-project .section-index-line {
+    display: block;
+
+    width: 46px;
+    height: 1px;
+
+    background:
+        rgba(23, 23, 20, 0.34);
+}
+
+
+.elias-project .stories-heading {
+    max-width: 870px;
+}
+
+
+.elias-project .section-eyebrow {
+    margin-bottom: 23px;
+
+    color:
+        var(--elias-taupe);
+}
+
+
+.elias-project .section-title {
+    color: #9f9487;
+
+    font-family:
+        var(--elias-serif);
+
+    font-size:
+        clamp(3.2rem, 6vw, 6.2rem);
+
+    font-weight: 400;
+
+    letter-spacing: -0.05em;
+
+    line-height: 0.96;
+}
+
+
+.elias-project .section-title span {
+    display: block;
+
+    margin-left:
+        clamp(20px, 8vw, 130px);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.85em;
+
+    font-style: italic;
+
+    letter-spacing: -0.055em;
+}
+
+
+.elias-project .section-description {
+    max-width: 600px;
+
+    margin-top: 24px;
+    margin-left: auto;
+
+    color:
+        rgba(23, 23, 20, 0.62);
+
+    font-size: 0.91rem;
+    font-weight: 300;
+
+    line-height: 1.9;
+}
+
+
+.elias-project .stories-grid {
+    display: grid;
+
+    max-width: 1500px;
+
+    margin:
+        clamp(45px, 5vw, 75px) auto 0;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap:
+        clamp(14px, 2vw, 28px);
+}
+
+
+.elias-project .story-card {
+    min-width: 0;
+}
+
+
+.elias-project .story-image-container {
+    position: relative;
+
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    background: #d8d0c4;
+}
+
+
+.elias-project .story-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+
+    will-change: transform;
+}
+
+
+.elias-project .story-image-shade {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(180deg,
+            rgba(8, 8, 7, 0.16) 0%,
+            transparent 36%,
+            rgba(8, 8, 7, 0.35) 100%);
+
+    opacity: 0.6;
+
+    transition:
+        opacity 500ms ease;
+}
+
+
+.elias-project .story-number,
+.elias-project .story-view {
+    position: absolute;
+
+    z-index: 3;
+
+    color:
+        rgba(255, 255, 255, 0.9);
+
+    font-family:
+        var(--elias-utility);
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+.elias-project .story-number {
+    top: 20px;
+    left: 20px;
+}
+
+
+.elias-project .story-view {
+    right: 20px;
+    bottom: 20px;
+
+    opacity: 0;
+
+    transform:
+        translateY(10px);
+
+    transition:
+        opacity 400ms ease,
+        transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.elias-project .story-card:hover .story-image {
+    transform:
+        scale(1.055);
+}
+
+
+.elias-project .story-card:hover .story-image-shade {
+    opacity: 0.85;
+}
+
+
+.elias-project .story-card:hover .story-view {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+.elias-project .story-information {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-top: 19px;
+}
+
+
+.elias-project .story-information h3 {
+    font-family:
+        var(--elias-serif);
+
+    font-size:
+        clamp(1.35rem, 2vw, 1.75rem);
+
+    font-weight: 400;
+
+    letter-spacing: -0.03em;
+}
+
+
+.elias-project .story-information p {
+    max-width: 110px;
+
+    padding-top: 5px;
+
+    color:
+        rgba(23, 23, 20, 0.48);
+
+    font-family:
+        var(--elias-utility);
+
+    font-size: 0.57rem;
+
+    letter-spacing: 0.13em;
+
+    line-height: 1.55;
+
+    text-align: right;
+
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   STORIES — DESKTOP STAGGER
+======================================== */
+
+@media (min-width: 1051px) {
+
+    .elias-project .stories-grid {
+        align-items: start;
+
+        margin-top: 70px;
+    }
+
+
+    .elias-project .story-card:nth-child(1) {
+        margin-top: 0;
+    }
+
+
+    .elias-project .story-card:nth-child(2) {
+        margin-top: 70px;
+    }
+
+
+    .elias-project .story-card:nth-child(3) {
+        margin-top: 18px;
+    }
+
+
+    .elias-project .story-card:nth-child(4) {
+        margin-top: 105px;
+    }
+
+
+    .elias-project .story-card:nth-child(1) .story-image-container,
+    .elias-project .story-card:nth-child(3) .story-image-container {
+        aspect-ratio: 4 / 5.4;
+    }
+
+
+    .elias-project .story-card:nth-child(2) .story-image-container,
+    .elias-project .story-card:nth-child(4) .story-image-container {
+        aspect-ratio: 4 / 4.7;
+    }
+
+}
+
+/* ========================================
+   QUOTE
+======================================== */
+
+.elias-project .quote-section {
+    position: relative;
+
+    display: grid;
+
+    min-height: 92svh;
+
+    place-items: center;
+
+    overflow: hidden;
+
+    padding: 100px 24px;
+
+    background: var(--elias-ink);
+    color: var(--elias-cream);
+}
+
+
+.elias-project .quote-background-word {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    color: rgba(255, 255, 255, 0.025);
+
+    font-family: var(--elias-serif);
+
+    font-size:
+        clamp(12rem, 30vw, 31rem);
+
+    letter-spacing: -0.08em;
+
+    line-height: 0.7;
+
+    white-space: nowrap;
+
+    transform: translateY(-50%);
+}
+
+
+.elias-project .quote-content {
+    position: relative;
+
+    z-index: 3;
+
+    width: min(1180px, 90vw);
+}
+
+
+.elias-project .quote-eyebrow {
+    margin-bottom: 35px;
+
+    color:
+        rgba(243, 239, 231, 0.52);
+
+    text-align: center;
+}
+
+
+.elias-project .quote {
+    margin: 0;
+
+    font-family: var(--elias-serif);
+
+    font-size:
+        clamp(3.4rem, 7.4vw, 7.5rem);
+
+    font-weight: 400;
+
+    letter-spacing: -0.05em;
+
+    line-height: 0.95;
+
+    text-align: center;
+}
+
+
+.elias-project .quote-mask {
+    display: block;
+
+    overflow: hidden;
+
+    padding-bottom: 0.09em;
+}
+
+
+.elias-project .quote-line {
+    display: block;
+}
+
+
+.elias-project .quote-line-italic {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.83em;
+
+    font-style: italic;
+
+    letter-spacing: -0.055em;
+}
+
+
+.elias-project .quote-signature {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    margin-top: 45px;
+
+    color:
+        rgba(243, 239, 231, 0.53);
+
+    font-family: var(--elias-utility);
+
+    font-size: 0.6rem;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+}
+
+
+.elias-project .quote-signature-line {
+    width: 48px;
+    height: 1px;
+
+    background:
+        rgba(243, 239, 231, 0.4);
+}
+
+
+/* ========================================
+   CLOSING
+======================================== */
+
+.elias-project .closing-section {
+    position: relative;
+
+    min-height: 100svh;
+
+    overflow: hidden;
+
+    padding:
+        clamp(105px, 13vw, 180px) clamp(24px, 6vw, 88px) 38px;
+
+    background:
+        radial-gradient(circle at 50% 40%,
+            rgba(191, 162, 116, 0.13),
+            transparent 36%),
+        var(--elias-warm-white);
+}
+
+
+.elias-project .closing-glow {
+    position: absolute;
+
+    top: 17%;
+    left: 50%;
+
+    width: min(60vw, 720px);
+    height: min(60vw, 720px);
+
+    border-radius: 50%;
+
+    background:
+        rgba(197, 171, 130, 0.12);
+
+    filter: blur(90px);
+
+    transform: translateX(-50%);
+}
+
+
+.elias-project .closing-content {
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.elias-project .closing-eyebrow {
+    margin-bottom: 28px;
+
+    color: var(--elias-taupe);
+}
+
+
+.elias-project .closing-title {
+    max-width: 980px;
+
+    margin: 0;
+
+    color: #9f9487;
+
+    font-family: var(--elias-serif);
+
+    font-size:
+        clamp(3.7rem, 7vw, 7.2rem);
+
+    font-weight: 400;
+
+    letter-spacing: -0.055em;
+
+    line-height: 0.94;
+}
+
+
+.elias-project .closing-title span {
+    display: block;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.84em;
+
+    font-style: italic;
+
+    letter-spacing: -0.06em;
+}
+
+
+.elias-project .closing-description {
+    max-width: 500px;
+
+    margin-top: 30px;
+
+    color:
+        rgba(23, 23, 20, 0.57);
+
+    font-size: 0.9rem;
+    font-weight: 300;
+
+    line-height: 1.85;
+}
+
+
+.elias-project .closing-button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 38px;
+
+    padding:
+        10px 10px 10px 26px;
+
+    border:
+        1px solid rgba(23, 23, 20, 0.35);
+
+    background: transparent;
+
+    color: var(--elias-ink);
+
+    font-family: var(--elias-utility);
+
+    font-size: 0.64rem;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+
+    transition:
+        background-color 400ms ease,
+        color 400ms ease,
+        transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.elias-project .closing-button-circle {
+    display: grid;
+
+    width: 44px;
+    height: 44px;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--elias-ink);
+
+    color: #fff;
+
+    font-size: 0.95rem;
+
+    transition:
+        background-color 400ms ease,
+        color 400ms ease,
+        transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.elias-project .closing-button:hover {
+    background: var(--elias-ink);
+
+    color: #fff;
+
+    transform: translateY(-3px);
+}
+
+
+.elias-project .closing-button:hover .closing-button-circle {
+    background: #fff;
+
+    color: var(--elias-ink);
+
+    transform: rotate(45deg);
+}
+
+
+/* ========================================
+   CONTACT / INQUIRY
+======================================== */
+
+.elias-project .contact-form-wrapper {
+    width: min(850px, 100%);
+
+    max-height: 0;
+
+    margin-top: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        max-height 900ms cubic-bezier(.16, 1, .3, 1),
+        margin-top 700ms cubic-bezier(.16, 1, .3, 1),
+        opacity 500ms ease,
+        transform 700ms cubic-bezier(.16, 1, .3, 1);
+}
+
+
+.elias-project .contact-form-wrapper.is-open {
+    max-height: 850px;
+
+    margin-top: 55px;
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+.elias-project .contact-form {
+    width: 100%;
+
+    padding-top: 42px;
+
+    border-top:
+        1px solid rgba(23, 23, 20, 0.18);
+
+    text-align: left;
+}
+
+
+.elias-project .contact-form-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 50px;
+
+    margin-bottom: 42px;
+}
+
+
+.elias-project .contact-form label {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+.elias-project .contact-form label>span {
+    color:
+        rgba(23, 23, 20, 0.48);
+
+    font-family: var(--elias-utility);
+
+    font-size: 0.57rem;
+    font-weight: 500;
+
+    letter-spacing: 0.19em;
+
+    text-transform: uppercase;
+}
+
+
+/* INPUTS */
+
+.elias-project .contact-form input,
+.elias-project .contact-form textarea {
+    width: 100%;
+
+    padding: 10px 0 15px;
+
+    border: 0;
+
+    border-bottom:
+        1px solid rgba(23, 23, 20, 0.24);
+
+    border-radius: 0;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--elias-ink);
+
+    font-family: var(--elias-serif);
+
+    font-size: 1.2rem;
+
+    transition:
+        border-color 300ms ease;
+}
+
+
+.elias-project .contact-form textarea {
+    min-height: 110px;
+
+    resize: none;
+
+    line-height: 1.5;
+}
+
+
+.elias-project .contact-form input::placeholder,
+.elias-project .contact-form textarea::placeholder {
+    color:
+        rgba(23, 23, 20, 0.26);
+}
+
+
+.elias-project .contact-form input:focus,
+.elias-project .contact-form textarea:focus {
+    border-color:
+        var(--elias-ink);
+}
+
+
+/* AUTOFILL */
+
+.elias-project .contact-form input:-webkit-autofill,
+.elias-project .contact-form input:-webkit-autofill:hover,
+.elias-project .contact-form input:-webkit-autofill:focus {
+    -webkit-text-fill-color:
+        var(--elias-ink);
+
+    -webkit-box-shadow:
+        0 0 0 1000px var(--elias-warm-white) inset;
+
+    box-shadow:
+        0 0 0 1000px var(--elias-warm-white) inset;
+
+    caret-color:
+        var(--elias-ink);
+}
+
+
+.elias-project .contact-message {
+    margin-top: 5px;
+}
+
+
+/* SEND */
+
+.elias-project .contact-submit {
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 42px;
+
+    padding: 19px 4px;
+
+    border-top:
+        1px solid rgba(23, 23, 20, 0.75);
+
+    border-bottom:
+        1px solid rgba(23, 23, 20, 0.75);
+
+    background: transparent;
+
+    color: var(--elias-ink);
+
+    font-family: var(--elias-utility);
+
+    font-size: 0.62rem;
+    font-weight: 500;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    transition:
+        padding 350ms cubic-bezier(.22, 1, .36, 1),
+        background-color 350ms ease,
+        color 350ms ease;
+}
+
+
+.elias-project .contact-submit span:last-child {
+    font-size: 1.05rem;
+
+    transition:
+        transform 350ms cubic-bezier(.22, 1, .36, 1);
+}
+
+
+.elias-project .contact-submit:hover {
+    padding-right: 17px;
+    padding-left: 17px;
+}
+
+
+.elias-project .contact-submit:hover span:last-child {
+    transform: translate(5px, -5px);
+}
+
+
+/* ========================================
+   SUCCESS
+======================================== */
+
+.elias-project .contact-success {
+    display: flex;
+
+    min-height: 330px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 55px 20px;
+
+    border-top:
+        1px solid rgba(23, 23, 20, 0.18);
+
+    text-align: center;
+
+    animation:
+        eliasContactSuccessIn 700ms cubic-bezier(.16, 1, .3, 1) forwards;
+}
+
+
+.elias-project .contact-success>span {
+    margin-bottom: 20px;
+
+    color: var(--elias-taupe);
+
+    font-family: var(--elias-utility);
+
+    font-size: 0.57rem;
+    font-weight: 500;
+
+    letter-spacing: 0.23em;
+
+    text-transform: uppercase;
+}
+
+
+.elias-project .contact-success h3 {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #9f9487;
+
+    font-family: var(--elias-serif);
+
+    font-size:
+        clamp(3rem, 5vw, 5rem);
+
+    font-weight: 400;
+
+    letter-spacing: -0.05em;
+
+    line-height: 0.95;
+}
+
+
+.elias-project .contact-success h3 em {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 0.88em;
+    font-weight: 400;
+}
+
+
+.elias-project .contact-success p {
+    margin-top: 22px;
+
+    color:
+        rgba(23, 23, 20, 0.5);
+
+    font-size: 0.8rem;
+}
+
+
+@keyframes eliasContactSuccessIn {
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.elias-project .footer {
+    position: relative;
+
+    z-index: 3;
+
+    display: grid;
+
+    align-items: end;
+
+    max-width: 1500px;
+
+    margin:
+        clamp(70px, 8vw, 115px) auto 0;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid var(--elias-border);
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+}
+
+
+.elias-project .footer-logo {
+    width: 160px;
+
+    max-height: 90px;
+
+    object-fit: contain;
+    object-position: left center;
+}
+
+
+.elias-project .footer-details {
+    color:
+        rgba(23, 23, 20, 0.53);
+
+    font-family: var(--elias-utility);
+
+    font-size: 0.59rem;
+
+    letter-spacing: 0.14em;
+
+    line-height: 1.75;
+
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+
+/*
+ * EliasContact possède maintenant un wrapper
+ * supplémentaire pour BACK TO PROJECTS.
+ */
+
+.elias-project .footer-actions {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 14px;
+}
+
+
+.elias-project .footer-back {
+    padding: 0;
+
+    background: transparent;
+
+    color:
+        rgba(23, 23, 20, 0.64);
+
+    font-family: var(--elias-utility);
+
+    font-size: 0.57rem;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+
+.elias-project .footer-copyright {
+    margin: 0;
+
+    color:
+        rgba(23, 23, 20, 0.45);
+
+    font-family: var(--elias-utility);
+
+    font-size: 0.57rem;
+
+    letter-spacing: 0.13em;
+
+    text-align: right;
+
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1050px) {
+
+    .elias-project .stories-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        row-gap: 50px;
+    }
+
+
+    .elias-project .stories-header {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .elias-project .section-description {
+        margin-left: 0;
+    }
+
+
+    .elias-project .hero-content {
+        padding-left: 8vw;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .elias-project .intro-content {
+        width: min(82vw, 370px);
+    }
+
+
+    .elias-project .intro-logo {
+        max-height: 190px;
+    }
+
+
+    .elias-project .intro-subtitle {
+        font-size: 0.52rem;
+
+        letter-spacing: 0.23em;
+
+        text-align: center;
+    }
+
+
+    /* HERO */
+
+    .elias-project .hero-section {
+        min-height: 100svh;
+    }
+
+
+    .elias-project .hero-video {
+        object-position: 43% center;
+    }
+
+
+    .elias-project .hero-overlay-gradient {
+        background:
+            linear-gradient(180deg,
+                rgba(7, 7, 6, 0.45) 0%,
+                rgba(7, 7, 6, 0.09) 30%,
+                rgba(7, 7, 6, 0.22) 55%,
+                rgba(7, 7, 6, 0.67) 100%),
+            linear-gradient(90deg,
+                rgba(7, 7, 6, 0.4),
+                rgba(7, 7, 6, 0.08));
+    }
+
+
+    .elias-project .hero-header {
+        padding: 22px;
+    }
+
+
+    .elias-project .header-logo-button {
+        width: 115px;
+    }
+
+
+    .elias-project .desktop-navigation {
+        gap: 0;
+    }
+
+
+    .elias-project .desktop-navigation button:not(.navigation-contact) {
+        display: none;
+    }
+
+
+    .elias-project .desktop-navigation .navigation-contact {
+        padding: 10px 15px;
+
+        font-size: 0.57rem;
+    }
+
+
+    .elias-project .hero-content {
+        width: 100%;
+        min-height: 100svh;
+
+        padding: 125px 24px 55px;
+
+        justify-content: center;
+    }
+
+
+
+    .elias-project .hero-eyebrow {
+        margin-bottom: 19px;
+
+        font-size: 0.56rem;
+
+        letter-spacing: 0.19em;
+    }
+
+
+    .elias-project .hero-title {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+
+        font-size: clamp(3.1rem, 14vw, 4.5rem);
+        line-height: 0.88;
+    }
+
+    .elias-project .hero-title-mask {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .elias-project .hero-title .hero-title-italic {
+        width: 100%;
+
+        margin-top: 24px;
+        margin-left: 26px;
+
+        font-size: 0.57em;
+        line-height: 0.95;
+    }
+
+
+    .elias-project .hero-description {
+        max-width: 310px;
+
+        margin-top: 18px;
+
+        font-size: 0.86rem;
+        line-height: 1.65;
+    }
+
+    .elias-project .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 18px;
+        margin-top: 18px;
+    }
+
+
+    .elias-project .primary-button {
+        min-width: 225px;
+
+        padding:
+            15px 18px 15px 21px;
+
+        font-size: 0.61rem;
+    }
+
+
+    .elias-project .text-button {
+        font-size: 0.59rem;
+    }
+
+
+    .elias-project .hero-scroll {
+        display: none;
+    }
+
+
+    /* STORIES */
+
+    .elias-project .stories-section {
+        padding:
+            95px 18px 105px;
+    }
+
+
+    .elias-project .section-index {
+        font-size: 0.53rem;
+    }
+
+
+    .elias-project .section-title {
+        font-size:
+            clamp(3.05rem, 14vw, 4.5rem);
+    }
+
+
+    .elias-project .section-title span {
+        margin-left: 15px;
+    }
+
+
+    .elias-project .section-description {
+        margin-top: 25px;
+
+        font-size: 0.81rem;
+
+        line-height: 1.75;
+    }
+
+
+    .elias-project .stories-grid {
+        margin-top: 62px;
+
+        grid-template-columns: 1fr;
+
+        gap: 47px;
+    }
+
+
+    .elias-project .story-image-container {
+        aspect-ratio: 4 / 5;
+    }
+
+
+    .elias-project .story-information h3 {
+        font-size: 1.55rem;
+    }
+
+
+    .elias-project .story-information p {
+        font-size: 0.52rem;
+    }
+
+
+    /* QUOTE */
+
+    .elias-project .quote-section {
+        min-height: 88svh;
+
+        padding: 95px 18px;
+    }
+
+
+    .elias-project .quote-content {
+        width: 100%;
+    }
+
+
+    .elias-project .quote {
+        font-size:
+            clamp(3.15rem, 14vw, 4.8rem);
+
+        line-height: 0.94;
+    }
+
+
+    .elias-project .quote-eyebrow {
+        margin-bottom: 27px;
+
+        font-size: 0.55rem;
+    }
+
+
+    .elias-project .quote-signature {
+        margin-top: 35px;
+
+        font-size: 0.52rem;
+    }
+
+
+    /* CLOSING */
+
+    .elias-project .closing-section {
+        min-height: auto;
+
+        padding:
+            105px 20px 28px;
+    }
+
+
+    .elias-project .closing-title {
+        font-size:
+            clamp(3.25rem, 14.5vw, 4.8rem);
+    }
+
+
+    .elias-project .closing-description {
+        max-width: 90%;
+
+        margin-top: 24px;
+
+        font-size: 0.81rem;
+    }
+
+
+    .elias-project .closing-button {
+        margin-top: 30px;
+
+        padding-left: 20px;
+
+        font-size: 0.57rem;
+    }
+
+
+    .elias-project .closing-button-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    /* CONTACT */
+
+    .elias-project .contact-form-wrapper.is-open {
+        margin-top: 42px;
+    }
+
+
+    .elias-project .contact-form {
+        padding-top: 32px;
+    }
+
+
+    .elias-project .contact-form-row {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .elias-project .contact-form input,
+    .elias-project .contact-form textarea {
+        font-size: 1.05rem;
+    }
+
+
+    .elias-project .contact-submit {
+        margin-top: 34px;
+    }
+
+
+    .elias-project .contact-success {
+        min-height: 290px;
+
+        padding: 45px 10px;
+    }
+
+
+    .elias-project .contact-success h3 {
+        font-size:
+            clamp(2.8rem, 13vw, 4rem);
+    }
+
+
+    /* FOOTER */
+
+    .elias-project .footer {
+        margin-top: 100px;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        text-align: center;
+    }
+
+
+    .elias-project .footer-logo {
+        width: 180px;
+
+        margin: 0 auto;
+
+        object-position: center;
+    }
+
+
+    .elias-project .footer-details {
+        text-align: center;
+    }
+
+
+    .elias-project .footer-actions {
+        align-items: center;
+    }
+
+
+    .elias-project .footer-copyright {
+        text-align: center;
+    }
+
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .elias-project *,
+    .elias-project *::before,
+    .elias-project *::after {
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+    }
+
+}

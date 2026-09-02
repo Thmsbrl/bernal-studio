@@ -1,0 +1,415 @@
+/* ========================================
+   PRANA OUTRO
+======================================== */
+
+.prana-outro {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    color: #f2f1ed;
+    background: #080808;
+}
+
+
+/* ========================================
+   NEXT PROJECT
+======================================== */
+
+.prana-next {
+    position: relative;
+
+    min-height: 62vh;
+
+    padding:
+        clamp(55px, 6vw, 90px)
+        clamp(28px, 6vw, 110px)
+        clamp(65px, 7vw, 105px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-top:
+        1px solid rgba(242, 241, 237, .12);
+
+    background: #0b0b0b;
+}
+
+
+/* ========================================
+   NEXT PROJECT — TOP
+======================================== */
+
+.prana-next__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color:
+        rgba(242, 241, 237, .38);
+
+    font-size: .6rem;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+}
+
+
+.prana-next__number {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+.prana-next__line {
+    display: block;
+
+    width: 54px;
+    height: 1px;
+
+    background:
+        rgba(242, 241, 237, .3);
+}
+
+
+/* ========================================
+   ELIAS PROJECT
+======================================== */
+
+.prana-next__project {
+    position: relative;
+
+    width: 100%;
+
+    margin-top:
+        clamp(65px, 7vw, 110px);
+
+    padding: 0;
+
+    border: 0;
+
+    color: inherit;
+    background: transparent;
+
+    text-align: left;
+}
+
+
+/* ========================================
+   CATEGORY
+======================================== */
+
+.prana-next__category {
+    display: block;
+
+    margin-bottom:
+        clamp(20px, 2vw, 32px);
+
+    color:
+        rgba(242, 241, 237, .42);
+
+    font-size: .62rem;
+
+    letter-spacing: .28em;
+
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   ELIAS TITLE
+======================================== */
+
+.prana-next__title {
+    display: flex;
+    flex-direction: column;
+
+    width: fit-content;
+
+    font-size:
+        clamp(4.5rem, 10vw, 10rem);
+
+    font-weight: 600;
+
+    line-height: .7;
+
+    letter-spacing: -.075em;
+
+    text-transform: uppercase;
+}
+
+
+.prana-next__outline {
+    display: block;
+
+    margin-left: 8vw;
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        1px rgba(242, 241, 237, .68);
+}
+
+
+/* ========================================
+   ARROW
+======================================== */
+
+.prana-next__arrow {
+    position: absolute;
+
+    right: 2vw;
+    top: 55%;
+
+    display: grid;
+
+    width: 56px;
+    height: 56px;
+
+    place-items: center;
+
+    border:
+        1px solid rgba(242, 241, 237, .28);
+
+    border-radius: 50%;
+
+    color:
+        rgba(242, 241, 237, .75);
+
+    font-size: 1.05rem;
+
+    transform:
+        translateY(-50%);
+
+    transition:
+        transform .4s ease,
+        background-color .4s ease,
+        color .4s ease,
+        border-color .4s ease;
+}
+
+
+.prana-next__project:hover
+.prana-next__arrow {
+    color: #080808;
+
+    border-color: #f2f1ed;
+
+    background: #f2f1ed;
+
+    transform:
+        translateY(-50%)
+        rotate(45deg);
+}
+
+
+/* ========================================
+   BACK TO PROJECTS
+======================================== */
+
+.prana-outro__back {
+    padding:
+        0
+        clamp(28px, 6vw, 110px)
+        32px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    background: #0b0b0b;
+}
+
+
+.prana-outro__back button {
+    padding: 0;
+
+    border: 0;
+
+    color:
+        rgba(242, 241, 237, .45);
+
+    background: transparent;
+
+    font-size: .55rem;
+
+    letter-spacing: .16em;
+
+    text-transform: uppercase;
+
+    transition:
+        color .3s ease;
+}
+
+
+.prana-outro__back button:hover {
+    color: #f2f1ed;
+}
+
+
+@media (max-width: 900px) {
+
+    .prana-outro__back {
+        padding:
+            0 32px 28px;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .prana-outro__back {
+        padding:
+            0 24px 24px;
+    }
+}
+
+
+
+/* ========================================
+   TABLET / MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .prana-next {
+        min-height: auto;
+
+        padding:
+            65px 32px
+            75px;
+    }
+
+
+    /* TOP */
+
+    .prana-next__top {
+        font-size: .56rem;
+    }
+
+
+    .prana-next__line {
+        width: 38px;
+    }
+
+
+    /* PROJECT */
+
+    .prana-next__project {
+        margin-top: 75px;
+    }
+
+
+    .prana-next__category {
+        margin-bottom: 25px;
+
+        font-size: .58rem;
+    }
+
+
+    /* TITLE */
+
+    .prana-next__title {
+        font-size:
+            clamp(4rem, 18vw, 6.5rem);
+
+        line-height: .74;
+    }
+
+
+    .prana-next__outline {
+        margin-left: 0;
+    }
+
+
+    /* ARROW */
+
+    .prana-next__arrow {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        width: 52px;
+        height: 52px;
+
+        margin-top: 42px;
+
+        transform: none;
+    }
+
+
+    .prana-next__project:hover
+    .prana-next__arrow {
+        transform:
+            rotate(45deg);
+    }
+
+
+    /* FOOTER */
+
+    .prana-outro__footer {
+        min-height: auto;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            22px 30px;
+
+        padding:
+            30px 32px;
+
+        font-size: .52rem;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 520px) {
+
+    .prana-next {
+        padding:
+            55px 24px
+            65px;
+    }
+
+
+    .prana-next__project {
+        margin-top: 65px;
+    }
+
+
+    .prana-next__title {
+        font-size:
+            clamp(3.7rem, 20vw, 5.5rem);
+
+        line-height: .76;
+    }
+
+
+    .prana-next__arrow {
+        width: 48px;
+        height: 48px;
+
+        margin-top: 36px;
+    }
+
+
+    .prana-outro__footer {
+        grid-template-columns: 1fr 1fr;
+
+        padding:
+            28px 24px;
+
+        gap: 20px;
+    }
+}
