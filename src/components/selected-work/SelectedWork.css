@@ -453,16 +453,20 @@
         rgba(242, 241, 237, .3);
 }
 
+.project-visual-elias {
+  aspect-ratio: 1440 / 708;
+}
+
 .project-visual-elias .project-preview-video {
-    position: relative;
-    inset: auto;
+  position: absolute;
+  inset: 0;
 
-    display: block;
+  display: block;
 
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: 100%;
 
-    object-fit: initial;
+  object-fit: cover;
 }
 
 
